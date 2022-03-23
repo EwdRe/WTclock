@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>status</title>
+	<link rel="icon" href="static/favicon.ico" type="image/ico">
+<link href="static/css/bootstrap.min.css" rel="stylesheet">
+<link href="static/css/materialdesignicons.min.css" rel="stylesheet">
+<link href="static/css/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container-fluid" id="sx">
+        
+        <div class="row" >
+          <div class="col-sm-6 col-lg-3">
+            <div class="card bg-primary">
+              <div class="card-body clearfix">
+                <div class="pull-right">
+                  <p class="h6 text-white m-t-0" >内存使用 (4GB DDR3L)</p>
+                  <p class="h3 text-white m-b-0 fa-1-5x"  >{{memq}}</p>
+					
+                </div>
+                <div class="pull-left"><span class="img-avatar img-avatar-48 bg-translucent"><i class="mdi mdi-memory fa-1-5x"></i></span>&nbsp; </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-sm-6 col-lg-3">
+            <div class="card bg-danger">
+              <div class="card-body clearfix">
+                <div class="pull-right">
+                  <p class="h6 text-white m-t-0">CPU使用(Atom X5-Z8300)</p>
+                  <p class="h3 text-white m-b-0 fa-1-5x">{{cpuq}}</p>
+                </div>
+                <div class="pull-left"> <span class="img-avatar img-avatar-48 bg-translucent"><i class="mdi mdi-chip fa-1-5x"></i></span> </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-sm-6 col-lg-3">
+            <div class="card bg-success">
+              <div class="card-body clearfix">
+                <div class="pull-right">
+                  <p class="h6 text-white m-t-0">硬盘(EMMC)</p>
+                  <p class="h3 text-white m-b-0 fa-1-5x">{{hddq}}</p>
+                </div>
+                <div class="pull-left"> <span class="img-avatar img-avatar-48 bg-translucent"><i class="mdi mdi-harddisk fa-1-5x"></i></span> </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-sm-6 col-lg-3">
+            <div class="card bg-purple">
+              <div class="card-body clearfix">
+                <div class="pull-right">
+                  <p class="h6 text-white m-t-0">程序版本(VER)</p>
+                  <p class="h3 text-white m-b-0 fa-1-5x">{{ver}}</p>
+                </div>
+                <div class="pull-left"> <span class="img-avatar img-avatar-48 bg-translucent"><i class="mdi mdi-map fa-1-5x"></i></span> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          
+          <div class="col-lg-6"> 
+            <div class="card">
+              <div class="card-header ">
+                <h4>当前主题&nbsp;</h4>
+              </div>
+              <div class="card-body">
+				  <img src="static/images/bg{{themebg}}.jpg"/>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6"> 
+            <div class="card">
+              <div class="card-header bg-{{run_status}}">
+                <h4>运行状态 ：{{run_status_ch}}</h4>
+              </div>
+              <div class="card-body">
+              <div class="alert alert-{{run_status}}" role="alert"><span class="mdi mdi-server"></span> 服务器链接{{run_status_hanzi}}</div>
+                <div class="alert alert-{{run_status}}" role="alert"><span class="mdi mdi-clock"></span>  时间同步{{run_status_hanzi}}</div>
+                <div class="alert alert-{{run_status}}" role="alert"><span class="mdi mdi-cloud"></span>  天气同步{{run_status_hanzi}}</div>
+                <div class="alert alert-{{run_status}}" role="alert"><span class="mdi mdi-message"></span>  消息同步{{run_status_hanzi}}</div>
+              </div>
+            </div>
+          </div>
+           
+        </div>
+        
+
+        
+        
+        <div class="row">
+          
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-header">
+                <h4>信息</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>名称</th>
+                        <th>开始日期</th>
+                        <th>截止日期</th>
+                        <th>状态</th>
+                        <th>进度</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>程序启动</td>
+                        <td>2022/02/07</td>
+                        <td> </td>
+                        <td><span class="label label-success">成功</span></td>
+                        <td>
+                          <div class="progress progress-striped progress-sm">
+                            <div class="progress-bar progress-bar-success" style="width: 50%;"></div>
+                          </div>
+                        </td>
+                  
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+</body>
+</html>
